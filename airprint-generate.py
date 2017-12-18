@@ -203,7 +203,7 @@ class AirPrintGenerate(object):
                     collected_printers.append( {
                         'SOURCE'    : 'CUPS', 
                         'name'      : p, 
-                        'host'      : None,     # Could/should use self.host, but would break old behaviour
+                        'host'      : self.host,
                         'address'   : None,
                         'port'      : port_no,
                         'domain'    : 'local', 
