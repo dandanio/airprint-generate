@@ -263,7 +263,7 @@ class AirPrintGenerate(object):
             if self.adminurl or key != 'adminurl':
                 service_node.append(self.new_txtrecord_node('%s=%s' % (key, txt[key])))
 
-        source = printer['SOURCE'] if printer.has_key('SOURCE') else ''
+        source = printer['SOURCE'] if 'SOURCE' in printer else ''
 
         fname = '%s%s%s.service' % (self.prefix, '%s-' % source if len(source) > 0 else '', printer_name)
 
